@@ -37,7 +37,7 @@ fn main() {
     file.read_to_string(&mut contents).unwrap();
     println!("{}",contents);
 
-    let e = create_event("time: \"12:34:56\" challenge: \"Find the fifth value in the \\\"sequence\\\"\" hint: \"WE9SIHdpdGggMHgxN0YK\" one: \"0x154\" two: \"0x150\" three: \"0x14A\" four: \"0x144\"".to_string());
+    let e = create_event(contents.to_string());
 
     let json = e.to_json();
 
